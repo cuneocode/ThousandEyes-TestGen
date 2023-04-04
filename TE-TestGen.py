@@ -3,9 +3,15 @@ import time
 
 url = 'https://api.thousandeyes.com/v6/tests/http-server/new.json'
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
+
+#### EDIT THIS ####
+# Add your Cisco email and api-key from Account Settings > Users and Roles > Basic Auth Token
 auth = ('email@cisco.com', 'api-key')
 
+# Add a list of URLs/IPs you wish to monitor. Example: ['www.cisco.com', 'www.app.thousandeyes.com', 'www.outlook.office365.com']
 servers = ['www.amazon.com']
+
+###################
 
 ## US Cloud Agents
 # Agent 56253 - California AWS US West
@@ -35,7 +41,11 @@ emeaAgents = [{'agentId': 32}, {'agentId': 4844}, {'agentId': 5643}]
 # Agent 273 - Syndey Australia
 apacAgents = [{'agentId': 33266}, {'agentId': 55980}, {'agentId': 69952}, {'agentId': 24695}, {'agentId': 56268}, {'agentId': 273}]
 
+#### EDIT THIS ####
+# combines the regional agent lists above, choose your combination of coverage or select your own agent IDs to monitor.
 agents = usAgents+latamAgents+emeaAgents+apacAgents
+
+###################
 port = 80
 alertsEnabled = 1
 interval = 300
